@@ -1,6 +1,12 @@
 /* Colors:
 /* Dark Teal: #69C4CC */
+/* Light Blue Text: #D5F1F0 */
+/* Medium Blue Text: #2A959E */
 /* Light Teal: #CFEFEE */
+/* Bright Pink: #E9168C */
+/* Bright Purple: #6F308B */
+/* Dark Purple: #6F1549 */
+
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 body { background-color: #69C4CC; }
@@ -8,13 +14,39 @@ header { background-color: #CFEFEE; }
 nav#main { background-color: #F3CECD; }
 section { background-color: #FFFFFF; }
 
+nav#authentication a {
+  color: #2A959E;
+  text-decoration: none;
+}
+
+nav#main a {
+  color: #6F1549;
+  text-decoration: none;
+}
+
+footer a {
+  color: #D5F1F0;
+  text-decoration: none;
+}
+
 /* Basic Global Styles */
 
 nav ul {
+  padding: 0;
   list-style-type: none;
 }
 nav ul li {
   display: inline-block;
+}
+
+/* Fonts */
+
+body {
+  font-family: Tahoma, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, nav#main {
+  font-family: 'Domine', serif;
+  font-weight: 700;
 }
 
 /* Grid Layout */
@@ -23,6 +55,7 @@ header {
   padding-top: 1em;
   text-align: right;
 }
+
 header nav#authentication {
   float: right;
 }
@@ -33,6 +66,24 @@ header h1 {
 body > section, header > section, nav#authentication, footer {
   margin: 0 5em;
   clear: right;
+}
+
+header > section {
+  -webkit-border-top-left-radius: 2em;
+  -webkit-border-top-right-radius: 2em;
+  -moz-border-radius-topleft: 2em;
+  -moz-border-radius-topright: 2em;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+}
+
+body > section {
+  -webkit-border-bottom-left-radius: 2em;
+  -webkit-border-bottom-right-radius: 2em;
+  -moz-border-radius-bottomleft: 2em;
+  -moz-border-radius-bottomright: 2em;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
 }
 
 @media screen and (max-width: 700px){
@@ -48,17 +99,38 @@ nav#main {
   padding: 0.5em;
 }
 nav#main ul {
-  margin: 0;
+  margin: 0 5em;
+}
+nav#main ul li{
+  width: 16%;
+}
+nav#main form input[type=text] {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  border: 2px solid #E399A7;
+  padding-left: 2em;
+  display: inline;
 }
 
-body > section {
-  padding: 1em;
+nav#main input::-webkit-input-placeholder{ color: #F5CBD3; }
+nav#main input:-moz-placeholder{ color: #F5CBD3; }
+nav#main input::-moz-placeholder{ color: #F5CBD3; }
+nav#main input::input-placeholder{ color: #F5CBD3; }
+nav#main input:-ms-input-placeholder { color: #F5CBD3; }
+
+nav#main form label, nav#main form input[type=submit] {
+  display: none;
+}
+
+body > section, header > section, footer > section {
+  padding: 1.5em;
 }
 
 section {
   clear: both;
 }
-section:after {
+section:after, section:before {
   content: "";
   display: table;
   clear: both;
@@ -69,6 +141,72 @@ section:after {
   float: left;
 }
 
+/* header/footer navigation styles */
+
+.logo {
+  /* margin-top: 0.5em; */
+  padding-left: 2em;
+  font-size: 3em;
+  text-align: left;
+  display: inline-block;
+}
+.logo .savings, .logo .multiplied {
+  display: block;
+}
+.logo .savings { color: #6F308B; }
+.logo .multiplied { color: #E9168C; }
+
+.tagline {
+  color: #78CBD0;
+}
+
+nav#authentication ul {
+  margin: 0.5em 0;
+}
+
+nav#pages {
+  margin-top: 3em;
+}
+nav#pages ul li a {
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  color: #ffffff;
+  padding: 0.4em 2em 0.4em 2em;
+  text-decoration: none;
+  margin-top: 0.5em;
+  display: inline-block;
+}
+nav#pages ul li:nth-child(1) a { background: #78CBD0; }
+nav#pages ul li:nth-child(2) a { background: #8DB639; }
+nav#pages ul li:nth-child(3) a { background: #6F308C; }
+nav#pages ul li:nth-child(4) a { background: #E9168C; }
+
+footer nav li:not(:last-child) a:after, nav#authentication li:not(:last-child) a:after {
+  content: '|';
+  margin: 0 0.25em;
+}
+
+
+/* homepage-specific styles */
+body.home > section h2 {
+  color: #8DB639;
+}
+body.home > section p {
+  color: #78CBD0;
+}
+body.home .call-to-action a {
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  background: #E9168C;
+  color: #ffffff;
+  padding: 0.4em;
+  text-decoration: none;
+  margin: 1em;
+  display: inline-block;
+  float: right;
+}
 ul#children {
   list-style-type: none;
   margin: 0;

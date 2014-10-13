@@ -4,10 +4,11 @@
     <title>Eliza's SavingsMultiplied</title>
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Domine:700' rel='stylesheet' type='text/css'>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta charset="utf-8" />
   </head>
-  <body>
+  <body class="home">
     <header>
       <nav id="authentication">
         <ul>
@@ -16,8 +17,11 @@
         </ul>
       </nav>
       <section>
-        <h1>Savings Multiplied</h1>
-        <nav>
+        <h1 class="logo">
+          <span class="savings">Savings</span>
+          <span class="multiplied">Multiplied</span>
+        </h1>
+        <nav id="pages">
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
@@ -25,7 +29,7 @@
             <li><a href="#">Press</a></li>
           </ul>
         </nav>
-        <h3>where parents of multiples save, sell &amp; share</h3>
+        <h3 class="tagline">where parents of multiples save, sell &amp; share</h3>
       </section>
       <nav id="main">
         <ul>
@@ -37,7 +41,7 @@
           <li>
             <form action="#" method="GET">
               <label for="search_term">Search</label>
-              <input id="search_term" type="text" placeholder="search" />
+              <input id="search_term" type="text" placeholder="search" size="10"/>
               <input type="submit" value="Search" />
             </form>
           </li>
@@ -49,7 +53,9 @@
         <div class="left_column">
           <h2>We're making one aspect of life easier for parents of multiples:</h2>
           <p>buying and selling gently used sets of clothes!</p>
-          <a href="#">Shop Now!</a>
+          <div class="call-to-action">
+            <a href="#">Shop Now!</a>
+          </div>
         </div>
         <ul id="children" class="right_column">
           <li><img src="images/twins.jpg" /></li>
